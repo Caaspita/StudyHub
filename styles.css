@@ -40,11 +40,17 @@ body{
 /* Header */
 
 .header_contenedor{
+    position: fixed;
     display: flex;
     justify-content: space-around;
     align-items: center;
     height: 90px;
+    width: 100%;
     border-bottom: solid 1px var(--gris);
+    background: rgba(34, 34, 34, 0.85);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(9.2px);
+    -webkit-backdrop-filter: blur(9.2px);
 }
 
 .header_menu a{
@@ -94,7 +100,8 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 350px;
+    height: 450px;
+    padding: 25px;
 }
 .buscador input{
     margin-top: 30px;
@@ -114,6 +121,8 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin: 50px 0;
+    padding: 25px;
 }
 .caracteristicas_contenedor h3{
     margin: 30px 0;
@@ -135,8 +144,110 @@ body{
 }
 
 
+
+/* Seccion Suscripcion */
+.suscripcion_contenedor{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+    padding: 25px;
+}
+.suscripcion{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 25px;
+}
+.suscripcion_contenedor h3{
+    margin: 30px 0;
+}
+.sub{
+    display: flex;
+    flex-direction: column;
+    height: 550px;
+    width: 100%;
+    max-width: 380px;
+    background-color: #ffbaf4;
+    color: var(--Oscuro);
+    padding: 40px;
+    border-radius: 15px;
+}
+.precio_contenedor p:not(.precio){
+    margin-bottom: 15px;
+}
+
+.sub span{
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 42px;
+}
+
+ul{
+    list-style: none;
+}
+li{
+    margin-top: 10px;
+}
+li::before{
+    content: "✔";
+    margin-right: 8px;
+}
+.precio_contenedor{
+    display: flex;
+    align-items: end;
+}
+.precio{
+    font-size: 64px;
+}
+.btn_sub-contenedor{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 100%;
+}
+.btn-sub{
+    height: 35px;
+    background-color: transparent;
+    border: solid 1px var(--Oscuro);
+    border-radius: 10px;
+    color: var(--Oscuro);
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    cursor: pointer;
+}
+.btn-premium{
+    height: 35px;
+    background-color: var(--violeta);
+    border: none;
+    border-radius: 10px;
+    color: var(--Claro);
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    cursor: pointer;
+}
+
+
+
+
+
+
+/* Footer */
+footer{
+    display: flex;
+    justify-content: center;
+}
+footer p a{
+    color: var(--violeta);
+    text-decoration: none;
+}
+
  @media (min-width: 768px) {
     .caracteristicas_item{
         flex: 1 1 calc(50% - 20px);;
+    }
+    .suscripcion{
+        flex-direction: row;
     }
 }
