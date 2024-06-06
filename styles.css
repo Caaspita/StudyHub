@@ -51,12 +51,26 @@ body{
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(9.2px);
     -webkit-backdrop-filter: blur(9.2px);
+    flex-wrap: wrap;
+}
+.header_menu{
+    display: flex;
+    position: absolute;
+    top: 90px;
+    flex-direction: column;
+    width: 100%;
+    border-bottom: solid 1px var(--gris);
+    align-items: center;
+    justify-content: center;
+    background: rgba(34, 34, 34, 0.85);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    gap: 15px;
+    height: 350px;
 }
 
 .header_menu a{
     color: var(--Claro);
     text-decoration: none;
-    margin-right: 20px;
     font-size: 18px;
 }
 .header_menu a:last-child{
@@ -67,6 +81,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 90px;
 }
 .logo img{
     margin-right: 10px;
@@ -92,6 +107,15 @@ body{
 .btn_singup{
     background-color: var(--violeta);
 }
+.menu_icon{
+    height: 45px;
+    color: var(--Claro);
+    cursor: pointer;
+}
+.menu_hamburguesa{
+    display: none;
+}
+
 
 /* Section Search */
 
@@ -114,6 +138,9 @@ body{
     padding-left: 15px;
     font-size: 20px;
 }
+.buscador input:focus{
+    border: solid 2px var(--violeta);
+}
 
 /* Section Caracteristicas */
 .caracteristicas_contenedor{
@@ -135,12 +162,21 @@ body{
 }
 
 .caracteristicas_item{
+    display: flex;
     flex: 1 1 100%;
     color: var(--Oscuro);
     width: 100%;
     max-width: 650px;
     padding: 15px;
     background-color: var(--rosa);
+}
+.icons{
+    height: 50px;
+    padding-right: 15px;
+}
+.c_titulo{
+    font-size: 24px;
+    font-weight: bold;
 }
 
 
@@ -242,6 +278,11 @@ footer p a{
     color: var(--violeta);
     text-decoration: none;
 }
+.displaynone{
+    display: none;
+}
+
+/* Mediaquerys */
 
  @media (min-width: 768px) {
     .caracteristicas_item{
@@ -249,5 +290,27 @@ footer p a{
     }
     .suscripcion{
         flex-direction: row;
+    }
+}
+ @media (min-width: 1100px) {
+    .header_contenedor{
+        flex-wrap: nowrap;
+    }
+    .header_menu{
+        position: static;
+        display: flex;
+        flex-direction: row;
+        width: 500px;
+        border: none;
+        box-shadow: none;
+        filter: none;
+        height: 90px;
+        background: none;
+    }
+    .menu_contenedor{
+        display: none;
+    }
+    .header_menu a{
+        margin-right: 20px;
     }
 }
