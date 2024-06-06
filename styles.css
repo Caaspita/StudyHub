@@ -42,6 +42,7 @@ body{
 .header_contenedor{
     position: fixed;
     display: flex;
+    top: 0;
     justify-content: space-around;
     align-items: center;
     height: 90px;
@@ -76,6 +77,12 @@ body{
 .header_menu a:last-child{
     margin-right: 0;
 }
+.header_menu a:hover{
+    scale: 1.1;
+    text-shadow: var(--violeta) 0 0 5px;
+    transition: .1s ease-in;
+    color: var(--violeta);
+}
 
 .logo{
     display: flex;
@@ -88,6 +95,7 @@ body{
 }
 .btns_contenedor{
     display: flex;
+    flex-direction: column;
     gap: 15px;
     justify-content: center;
     align-items: center;
@@ -126,6 +134,7 @@ body{
     align-items: center;
     height: 450px;
     padding: 25px;
+    margin-top: 40px;
 }
 .buscador input{
     margin-top: 30px;
@@ -312,5 +321,8 @@ footer p a{
     }
     .header_menu a{
         margin-right: 20px;
+    }
+    .btns_contenedor{
+        flex-direction: row;
     }
 }
