@@ -331,6 +331,7 @@ footer p a{
     align-items: center;
     background-color: #222925;
     height: 400px;
+    overflow-x: hidden;
 }
 .nosotros_vision p{
     font-size: 24px;
@@ -340,7 +341,7 @@ footer p a{
 }
 .nosotros-vision-bg{
     position: absolute;
-    left: 70%;
+    left: 50%;
     opacity: 0.03;
     scale: 6;
     transform: rotate(-30deg);
@@ -372,6 +373,9 @@ footer p a{
     }
     .suscripcion{
         flex-direction: row;
+    }
+    .nosotros-vision-bg{
+        left: 70%;
     }
 }
  @media (min-width: 1100px) {
