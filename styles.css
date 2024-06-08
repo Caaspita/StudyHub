@@ -35,6 +35,7 @@ body{
     background-color: var(--Oscuro);
     color: var(--Claro);
     font-family: var(--fontRubik);
+
 }
 
 /* Header */
@@ -282,6 +283,7 @@ li::before{
 footer{
     display: flex;
     justify-content: center;
+    align-items: end;
 }
 footer p a{
     color: var(--violeta);
@@ -291,26 +293,76 @@ footer p a{
     display: none;
 }
 
+/* FAQ */
+.faq{
+    display: flex;
+    max-width: 1200px;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
 
 
 
 
 /* Nosotros */
 
-.nosotros{
+.nosotros_mision{
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 15px;
+    gap: 45px;
     margin-top: calc(60px + 90px);
     width: 100%;
+    height: 400px;
     
 }
-.nosotros p{
+.nosotros_mision p{
     font-size: 24px;
     max-width: 1200px;
+    text-indent: 55px;
+    padding: 15px;
+}
+.nosotros_vision{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #222925;
+    height: 400px;
+}
+.nosotros_vision p{
+    font-size: 24px;
+    max-width: 1200px;
+    text-indent: 55px;
+    padding: 15px;
+}
+.nosotros-vision-bg{
+    position: absolute;
+    right: 15%;
+    opacity: 0.03;
+    scale: 6;
+    transform: rotate(-30deg);
 }
 
+.nosotros_organigrama{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 60px;
+    height: 100%;
+    gap: 50px;
+    padding: 15px;
+}
+.nosotros_organigrama h3{
+    margin-left: 30px;
+}
+.organigrama{
+    width: 100%;
+    max-width: 1200px;
+}
 
 /* Mediaquerys */
 
@@ -330,7 +382,7 @@ footer p a{
         position: static;
         display: flex;
         flex-direction: row;
-        width: 500px;
+        width: 900px;
         border: none;
         box-shadow: none;
         filter: none;
