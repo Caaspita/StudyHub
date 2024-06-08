@@ -68,6 +68,7 @@ body{
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     gap: 15px;
     height: 350px;
+    z-index: 101;
 }
 
 .header_menu a{
@@ -325,7 +326,6 @@ footer p a{
     padding: 15px;
 }
 .nosotros_vision{
-    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -340,7 +340,7 @@ footer p a{
 }
 .nosotros-vision-bg{
     position: absolute;
-    right: 15%;
+    left: 70%;
     opacity: 0.03;
     scale: 6;
     transform: rotate(-30deg);
