@@ -363,9 +363,9 @@ footer p a{
 }
 .nosotros-vision-bg{
     position: absolute;
-    left: 50%;
+    left: 45%;
     opacity: 0.03;
-    scale: 6;
+    scale: 5;
     transform: rotate(-30deg);
 }
 
@@ -398,6 +398,7 @@ footer p a{
     }
     .nosotros-vision-bg{
         left: 70%;
+        scale: 6;
     }
 
 }
