@@ -2,6 +2,7 @@
 
     --violeta: #9e14a4;
     --rosa:#ffbaf4;
+    --verdeOscuro: #222925;
 
     --Oscuro: #222222;
     --gris: grey;
@@ -231,13 +232,13 @@ body{
     font-size: 42px;
 }
 
-ul{
+.sub ul{
     list-style: none;
 }
-li{
+.sub li{
     margin-top: 10px;
 }
-li::before{
+.sub li::before{
     content: "✔";
     margin-right: 8px;
 }
@@ -295,19 +296,40 @@ footer p a{
 }
 
 /* FAQ */
+.faq_contendor{
+    display: flex;
+    justify-content: center;
+    margin-top: 80px;
+    padding: 15px;
+    background-color: var(--verdeOscuro);
+}
 .faq{
     display: flex;
     max-width: 1200px;
     width: 100%;
+    flex-direction: column;
+    gap: 60px;
     justify-content: center;
     align-items: center;
+}
+.faq_preguntas{
+    list-style: none;
+}
+.faq_pregunta{
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+.faq_respuesta{
+    margin-left: 0px;
+    text-indent: 35px;
+    margin-bottom: 35px;
 }
 
 
 
 
-
-/* Nosotros */
+/*  ----------------- Nosotros ----------------- */
 
 .nosotros_mision{
     display: flex;
@@ -329,7 +351,7 @@ footer p a{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #222925;
+    background-color: var(--verdeOscuro);
     height: 400px;
     overflow-x: hidden;
 }
@@ -377,6 +399,7 @@ footer p a{
     .nosotros-vision-bg{
         left: 70%;
     }
+
 }
  @media (min-width: 1100px) {
     .header_contenedor{
@@ -401,5 +424,13 @@ footer p a{
     }
     .btns_contenedor{
         flex-direction: row;
+        align-items: center;
+    }
+    .faq{
+        flex-direction: row;
+        align-items: start;
+    }
+    .faq_respuesta{
+        margin-left: 15px;
     }
 }
